@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">SecretLocker</string>
+    <string name="app_introduction">Please to choose the function from menu.</string>
+
+    <string name="app_permission_granted">Got permissions to make this app works normally.</string>
+    <string name="app_permission_denied">Permission denied, app can not work normally.</string>
+
+    <string name="navigation_drawer_content_author">by Wayne Jiang</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="navigation_encrypt">Encrypt</string>
+    <string name="navigation_decrypt">Decrypt</string>
+    <string name="navigation_others_group">Others</string>
+    <string name="navigation_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+    <string name="preference_encrypt_strength">Encrypt Strength</string>
+    <string name="array_strength_128">128 Bits</string>
+    <string name="array_strength_192">192 Bits</string>
+    <string name="array_strength_256">256 Bits</string>
+
+    <string name="btn_decrypt">Decrypt</string>
+    <string name="btn_encrypt">Encrypt</string>
+    <string name="intent_dialog_title">Choose</string>
+</resources>

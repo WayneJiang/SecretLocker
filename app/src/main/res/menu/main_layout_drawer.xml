@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_encrypt"
+            android:title="@string/navigation_encrypt" />
+        <item
+            android:id="@+id/nav_decrypt"
+            android:title="@string/navigation_decrypt" />
+    </group>
+
+    <item android:title="@string/navigation_others_group">
+        <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:title="@string/navigation_settings" />
+        </menu>
+    </item>
+</menu>

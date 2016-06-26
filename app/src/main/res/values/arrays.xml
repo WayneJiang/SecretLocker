@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="encrypt_strength_entries">
+        <item>@string/array_strength_128</item>
+        <item>@string/array_strength_192</item>
+        <item>@string/array_strength_256</item>
+    </string-array>
+    <string-array name="encrypt_strength_values">
+        <item>128</item>
+        <item>192</item>
+        <item>256</item>
+    </string-array>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        android:entries="@array/encrypt_strength_entries"
+        android:entryValues="@array/encrypt_strength_values"
+        android:key="key_listpreference_strength"
+        android:title="@string/preference_encrypt_strength"></ListPreference>
+</PreferenceScreen>
