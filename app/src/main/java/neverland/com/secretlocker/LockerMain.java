@@ -1,7 +1,6 @@
 package neverland.com.secretlocker;
 
 import android.Manifest;
-import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
@@ -37,7 +36,6 @@ public class LockerMain extends AppCompatActivity
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mActionBarDrawerToggle;
     private NavigationView mNavigationView;
-    private Fragment mSettingsFragment;
     private FragmentManager mFragmentManager;
     private FragmentTransaction mFragmentTransaction;
     private static final File AppFile = new File(Environment.getExternalStorageDirectory(), "SecretLocker");
@@ -76,7 +74,6 @@ public class LockerMain extends AppCompatActivity
         mNavigationView = (NavigationView) findViewById(R.id.nav_view);
         mNavigationView.setNavigationItemSelectedListener(this);
 
-        mSettingsFragment = new SettingsFragment();
         mFragmentManager = getFragmentManager();
 
         if (!AppFile.exists()) {
@@ -118,34 +115,21 @@ public class LockerMain extends AppCompatActivity
 
         if (id == R.id.nav_decrypt) {
             mToolbar.setBackgroundColor(Color.parseColor("#02F78E"));
-            if (mSettingsFragment.isVisible()) {
-                mFragmentTransaction = mFragmentManager.beginTransaction();
-                mFragmentTransaction.remove(mSettingsFragment).commit();
-            }
             mTextView.setVisibility(View.GONE);
             mFragmentTransaction = mFragmentManager.beginTransaction();
             mFragmentTransaction.replace(R.id.content_locker_main, MainFragment.newInstance("Decrypt")).commit();
         } else if (id == R.id.nav_encrypt) {
             mToolbar.setBackgroundColor(Color.parseColor("#FF2D2D"));
-            if (mSettingsFragment.isVisible()) {
-                mFragmentTransaction = mFragmentManager.beginTransaction();
-                mFragmentTransaction.remove(mSettingsFragment).commit();
-            }
             mTextView.setVisibility(View.GONE);
             mFragmentTransaction = mFragmentManager.beginTransaction();
             mFragmentTransaction.replace(R.id.content_locker_main, MainFragment.newInstance("Encrypt")).commit();
-        } else if (id == R.id.nav_settings) {
-            if (!mSettingsFragment.isVisible()) {
-                mFragmentTransaction = mFragmentManager.beginTransaction();
-                mFragmentTransaction.replace(R.id.content_locker_main, mSettingsFragment).commit();
-            }
         }
 
         mDrawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
 
-    public static File getFolder(){
+    public static File getFolder() {
         return AppFile;
     }
 }

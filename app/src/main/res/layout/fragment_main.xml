@@ -1,24 +1,33 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context="neverland.com.secretlocker.MainFragment">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="neverland.com.secretlocker.MainFragment">
 
     <RelativeLayout
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center">
 
         <Button
-            android:id="@+id/btn_decrypt" android:layout_width="wrap_content"
+            android:id="@+id/btn_decrypt"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btn_decrypt"
-            android:visibility="gone"/>
+            android:visibility="gone" />
 
         <Button
-            android:id="@+id/btn_encrypt" android:layout_width="wrap_content"
+            android:id="@+id/btn_encrypt"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btn_encrypt"
-            android:visibility="gone"/>
+            android:visibility="gone" />
     </RelativeLayout>
+
+    <ListView
+        android:id="@+id/files_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"></ListView>
 
 </FrameLayout>
